@@ -1,4 +1,4 @@
-package main.java.edu.neu.csye7374;
+package main.java.edu.neu.csye7374.Core;
 
 import main.java.edu.neu.csye7374.State.Canceled;
 import main.java.edu.neu.csye7374.State.FlightStatusAPI;

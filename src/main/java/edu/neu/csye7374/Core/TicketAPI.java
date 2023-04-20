@@ -1,4 +1,4 @@
-package main.java.edu.neu.csye7374;
+package main.java.edu.neu.csye7374.Core;
 
 public interface TicketAPI {
     int getId();
