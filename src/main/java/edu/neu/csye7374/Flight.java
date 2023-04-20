@@ -1,5 +1,8 @@
 package main.java.edu.neu.csye7374;
 
+
+//Builder Pattern
+
 public class Flight implements FlightAPI{
 
     private String name;

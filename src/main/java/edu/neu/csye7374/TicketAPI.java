@@ -6,4 +6,6 @@ public interface TicketAPI {
     double getPrice();
 
     String getName();
+
+    String getFlightDetails();
 }
