@@ -1,6 +1,4 @@
-package main.java.edu.neu.csye7374;
-
-import main.java.edu.neu.csye7374.FlightAPI;
+package main.java.edu.neu.csye7374.Prototype;
 
 public class Flight implements FlightAPI, Cloneable {
 

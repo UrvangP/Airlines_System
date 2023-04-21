@@ -5,11 +5,9 @@ import main.java.edu.neu.csye7374.Bridge.*;
 import main.java.edu.neu.csye7374.Command.CancelFlight;
 import main.java.edu.neu.csye7374.Command.ChangeFlight;
 import main.java.edu.neu.csye7374.Command.UpdateTicket;
-import main.java.edu.neu.csye7374.FlightAPI;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 import main.java.edu.neu.csye7374.Observer.Booking;
 import main.java.edu.neu.csye7374.Strategy.DiscountAPI;
-import main.java.edu.neu.csye7374.Strategy.MemberDiscount;
-import main.java.edu.neu.csye7374.Strategy.StudentDiscount;
 
 public class ThirdPartyBooking implements FlightBookingAPI{
 

@@ -1,7 +1,7 @@
 package main.java.edu.neu.csye7374.Observer;
 
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
-import main.java.edu.neu.csye7374.FlightAPI;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 
 public class QuantityObserver implements BookingObserverAPI{
     @Override

@@ -1,25 +1,19 @@
 package main.java.edu.neu.csye7374;
 
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
-import main.java.edu.neu.csye7374.Bridge.Charges1;
-import main.java.edu.neu.csye7374.Bridge.FinalPrice1;
-import main.java.edu.neu.csye7374.Bridge.FinalPriceAPI1;
 import main.java.edu.neu.csye7374.Builder.FlightBuilder;
 import main.java.edu.neu.csye7374.Builder.TicketBuilder;
-import main.java.edu.neu.csye7374.Command.ChangeFlight;
-import main.java.edu.neu.csye7374.Command.CommandAPI;
-import main.java.edu.neu.csye7374.Command.UpdateTicket;
 import main.java.edu.neu.csye7374.Decorator.Meal;
 import main.java.edu.neu.csye7374.Facade.BookingType;
 import main.java.edu.neu.csye7374.Facade.FlightBooking;
-import main.java.edu.neu.csye7374.Facade.FlightBookingAPI;
 import main.java.edu.neu.csye7374.Factories.FlightFactoryAPI;
 import main.java.edu.neu.csye7374.Factories.FlightFactoryLazy;
 import main.java.edu.neu.csye7374.Factories.TicketFactoryAPI;
 import main.java.edu.neu.csye7374.Factories.TicketFactoryLazy;
+import main.java.edu.neu.csye7374.Prototype.Flight;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 import main.java.edu.neu.csye7374.Strategy.MemberDiscount;
 import main.java.edu.neu.csye7374.Strategy.NoDiscount;
-import main.java.edu.neu.csye7374.Strategy.StudentDiscount;
 
 public class BookingSimulation {
 

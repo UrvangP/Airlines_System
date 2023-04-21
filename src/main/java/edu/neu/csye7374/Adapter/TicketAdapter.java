@@ -3,7 +3,7 @@ package main.java.edu.neu.csye7374.Adapter;
 
 //Adapter Pattern
 
-import main.java.edu.neu.csye7374.FlightAPI;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 
 public class TicketAdapter implements TicketAPI {
 

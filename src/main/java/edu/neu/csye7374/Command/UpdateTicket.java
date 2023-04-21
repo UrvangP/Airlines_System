@@ -1,6 +1,6 @@
 package main.java.edu.neu.csye7374.Command;
 
-import main.java.edu.neu.csye7374.FlightAPI;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 import main.java.edu.neu.csye7374.Observer.Booking;
 
 public class UpdateTicket implements ReceiverAPI {

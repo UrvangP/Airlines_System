@@ -1,4 +1,6 @@
-package main.java.edu.neu.csye7374;
+package main.java.edu.neu.csye7374.Prototype;
+
+import main.java.edu.neu.csye7374.Prototype.Flight;
 
 public interface FlightAPI extends Cloneable{
 

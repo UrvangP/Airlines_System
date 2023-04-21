@@ -1,8 +1,7 @@
 package main.java.edu.neu.csye7374.Facade;
 
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
-import main.java.edu.neu.csye7374.FlightAPI;
-import main.java.edu.neu.csye7374.Observer.Booking;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 import main.java.edu.neu.csye7374.Strategy.DiscountAPI;
 
 public interface FlightBookingAPI{

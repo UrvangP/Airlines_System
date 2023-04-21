@@ -4,8 +4,7 @@ package main.java.edu.neu.csye7374.Factories;
 //Factory and Singleton Pattern
 
 import main.java.edu.neu.csye7374.Builder.FlightBuilder;
-import main.java.edu.neu.csye7374.Flight;
-import main.java.edu.neu.csye7374.FlightAPI;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 
 public class FlightFactoryLazy implements FlightFactoryAPI{
 

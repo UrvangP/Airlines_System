@@ -2,8 +2,7 @@ package main.java.edu.neu.csye7374.Builder;
 
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
 import main.java.edu.neu.csye7374.Adapter.TicketAdapter;
-import main.java.edu.neu.csye7374.Flight;
-import main.java.edu.neu.csye7374.FlightAPI;
+import main.java.edu.neu.csye7374.Prototype.FlightAPI;
 
 public class TicketBuilder {
     private String name;
