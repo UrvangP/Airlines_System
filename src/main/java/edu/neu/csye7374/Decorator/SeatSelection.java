@@ -1,6 +1,7 @@
 package main.java.edu.neu.csye7374.Decorator;
 
-import main.java.edu.neu.csye7374.TicketAPI;
+import main.java.edu.neu.csye7374.Adapter.TicketAPI;
+import main.java.edu.neu.csye7374.FlightAPI;
 
 public class SeatSelection extends BookingDecoratorAPI{
 
@@ -16,7 +17,12 @@ public class SeatSelection extends BookingDecoratorAPI{
     }
 
     @Override
-    public String getFlightDetails() {
-        return ticket.getFlightDetails() + " Seat Selection";
+    public FlightAPI getFlight() {
+        return ticket.getFlight();
+    }
+
+    @Override
+    public void setFlight(FlightAPI fl) {
+        ticket.setFlight(fl);
     }
 }

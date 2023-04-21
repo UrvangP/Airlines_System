@@ -2,8 +2,7 @@ package main.java.edu.neu.csye7374.Decorator;
 
 //Decorator Pattern
 
-import main.java.edu.neu.csye7374.TicketAPI;
-
+import main.java.edu.neu.csye7374.Adapter.TicketAPI;
 public abstract class BookingDecoratorAPI implements TicketAPI {
 
     @Override
@@ -18,11 +17,6 @@ public abstract class BookingDecoratorAPI implements TicketAPI {
 
     @Override
     public String getName(){
-        return "";
-    }
-
-    @Override
-    public String getFlightDetails(){
         return "";
     }
 

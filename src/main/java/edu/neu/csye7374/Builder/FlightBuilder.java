@@ -8,6 +8,7 @@ public class FlightBuilder {
     private double price;
     private String name;
     private String description;
+    private int seatsOccupied;
 
     public FlightBuilder() {
     }
@@ -23,6 +24,8 @@ public class FlightBuilder {
     public void setDescription(String desc) { this.description = desc; }
 
     public FlightAPI getItem() {
-        return new Flight(name, price, description);
+        return new Flight(name, price, description, seatsOccupied);
     }
+
+    public void setSeatsOccupied(int s) { this.seatsOccupied = s; }
 }

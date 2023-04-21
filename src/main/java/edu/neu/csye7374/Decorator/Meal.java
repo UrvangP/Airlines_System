@@ -1,7 +1,7 @@
 package main.java.edu.neu.csye7374.Decorator;
 
+import main.java.edu.neu.csye7374.Adapter.TicketAPI;
 import main.java.edu.neu.csye7374.FlightAPI;
-import main.java.edu.neu.csye7374.TicketAPI;
 
 public class Meal extends BookingDecoratorAPI{
 
@@ -17,7 +17,13 @@ public class Meal extends BookingDecoratorAPI{
     }
 
     @Override
-    public String getFlightDetails() {
-        return ticket.getFlightDetails() + " Meal";
+    public FlightAPI getFlight() {
+        return ticket.getFlight();
     }
+
+    @Override
+    public void setFlight(FlightAPI fl) {
+        ticket.setFlight(fl);
+    }
+
 }
