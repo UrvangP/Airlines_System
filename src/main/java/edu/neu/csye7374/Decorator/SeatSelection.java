@@ -9,11 +9,12 @@ public class SeatSelection extends TicketDecoratorAPI {
 
     public SeatSelection(TicketAPI ticket) {
         this.ticket = ticket;
+        ticket.setPrice(ticket.getPrice() + 25.0);
     }
 
     @Override
     public double getPrice() {
-        return ticket.getPrice() + 25.00;
+        return ticket.getPrice();
     }
 
     @Override
@@ -40,5 +41,10 @@ public class SeatSelection extends TicketDecoratorAPI {
     @Override
     public String getName() {
         return ticket.getName();
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.ticket.setPrice(price);
     }
 }

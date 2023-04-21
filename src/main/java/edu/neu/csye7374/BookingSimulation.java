@@ -1,15 +1,25 @@
 package main.java.edu.neu.csye7374;
 
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
+import main.java.edu.neu.csye7374.Bridge.Charges1;
+import main.java.edu.neu.csye7374.Bridge.FinalPrice1;
+import main.java.edu.neu.csye7374.Bridge.FinalPriceAPI1;
 import main.java.edu.neu.csye7374.Builder.FlightBuilder;
 import main.java.edu.neu.csye7374.Builder.TicketBuilder;
+import main.java.edu.neu.csye7374.Command.ChangeFlight;
+import main.java.edu.neu.csye7374.Command.CommandAPI;
+import main.java.edu.neu.csye7374.Command.UpdateTicket;
 import main.java.edu.neu.csye7374.Decorator.Meal;
+import main.java.edu.neu.csye7374.Facade.BookingType;
 import main.java.edu.neu.csye7374.Facade.FlightBooking;
 import main.java.edu.neu.csye7374.Facade.FlightBookingAPI;
 import main.java.edu.neu.csye7374.Factories.FlightFactoryAPI;
 import main.java.edu.neu.csye7374.Factories.FlightFactoryLazy;
 import main.java.edu.neu.csye7374.Factories.TicketFactoryAPI;
 import main.java.edu.neu.csye7374.Factories.TicketFactoryLazy;
+import main.java.edu.neu.csye7374.Strategy.MemberDiscount;
+import main.java.edu.neu.csye7374.Strategy.NoDiscount;
+import main.java.edu.neu.csye7374.Strategy.StudentDiscount;
 
 public class BookingSimulation {
 
@@ -77,22 +87,42 @@ public class BookingSimulation {
         ticket1 = new Meal(ticket1);
         System.out.println(ticket1);
 
-        //Demonstration of facade pattern and decorator pattern to decorate the book object
+        //Demonstration of facade pattern, State pattern and Observer Pattern
         System.out.println("\n***************************************************************************************");
         System.out.println("Demonstration of Facade pattern to make the ticket booking");
+        System.out.println("Demonstration of Strategy pattern to select the booking type");
         System.out.println("Demonstration of State pattern, to change the state of ticket booking from pending to confirmed or canceled");
         System.out.println("Demonstration of Observer pattern, to confirm ticket based on seat availability");
 
         System.out.println("\n");
-        FlightBooking flightBooking1 = new FlightBooking(ticket1);
-        flightBooking1.bookDirect();
+        FlightBooking flightBooking1 = new FlightBooking(ticket1, BookingType.getBookingType("direct"), new MemberDiscount());
+        flightBooking1.book();
+        System.out.println(flightBooking1);
 
         System.out.println("\n");
-        FlightBooking flightBooking2 = new FlightBooking(ticket2);
-        flightBooking2.bookThirdParty();
+        FlightBooking flightBooking2 = new FlightBooking(ticket2, BookingType.getBookingType("thirdparty"), new NoDiscount());
+        flightBooking2.book();
+        System.out.println(flightBooking2);
 
+        //Demonstration of Bridge Pattern
+        System.out.println("\n***************************************************************************************");
+        System.out.println("Demonstration of Bridge pattern to calculate final price for the ticket");
+        flightBooking1.calculateFinalPrice();
+        System.out.println(flightBooking1);
+        System.out.println("\n");
+        flightBooking2.calculateFinalPrice();
+        System.out.println(flightBooking2);
 
+        //Demonstration of Command Pattern
+        System.out.println("\n***************************************************************************************");
+        System.out.println("Demonstration of Command pattern to update the booked ticket");
 
+        System.out.println("\n");
+        flightBooking1.changeBooking(flight3);
+        System.out.println(flightBooking1);
+        System.out.println("\n");
+        flightBooking2.cancelBooking();
+        System.out.println(flightBooking2);
 
     }
 }

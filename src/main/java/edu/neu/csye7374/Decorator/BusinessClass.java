@@ -3,13 +3,13 @@ package main.java.edu.neu.csye7374.Decorator;
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
 import main.java.edu.neu.csye7374.FlightAPI;
 
-public class Meal extends TicketDecoratorAPI {
+public class BusinessClass extends TicketDecoratorAPI {
 
     private TicketAPI ticket;
 
-    public Meal(TicketAPI ticket) {
+    public BusinessClass(TicketAPI ticket) {
         this.ticket = ticket;
-        ticket.setPrice(ticket.getPrice() + 50.0);
+        ticket.setPrice(ticket.getPrice() + 250.0);
     }
 
     @Override
@@ -40,11 +40,13 @@ public class Meal extends TicketDecoratorAPI {
     @Override
     public String toString(){
         return "Ticket id: " + ticket.getId() + " ,Passenger Name: " + ticket.getName() + " ,Flight Name: " +
-                ticket.getFlight().getName() + " ,Flight Price: " + getPrice() + ", Meal";
+                ticket.getFlight().getName() + " ,Flight Price: " + getPrice() + ", Business class upgrade";
     }
 
     @Override
     public void setPrice(double price) {
         this.ticket.setPrice(price);
     }
+
 }
+

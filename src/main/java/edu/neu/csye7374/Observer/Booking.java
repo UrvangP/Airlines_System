@@ -68,4 +68,10 @@ public class Booking implements BookingStatusAPI {
     public void setTicket(TicketAPI ticket) {
         this.ticket = ticket;
     }
+
+    @Override
+    public String toString() {
+        return "Booking for ticket id: " + ticket.getId() + " ,Passenger Name: " + ticket.getName() + " ,for flight: "
+                + ticket.getFlight().getName();
+    }
 }

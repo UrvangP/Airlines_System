@@ -18,6 +18,7 @@ public class FinalPrice1 implements FinalPriceAPI1{
     @Override
     public double finalPrice(double price) {
         this.price = charges.addServiceCharge(price);
+        this.price = this.strategy.apply(this.price);
         return this.price;
     }
 

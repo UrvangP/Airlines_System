@@ -12,4 +12,6 @@ public interface TicketAPI {
     FlightAPI getFlight();
 
     void setFlight(FlightAPI fl);
+
+    void setPrice(double newPrice);
 }
