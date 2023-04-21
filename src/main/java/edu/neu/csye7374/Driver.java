@@ -65,7 +65,7 @@ public class Driver {
         System.out.println("============Main Execution Start===================\n\n");
 
         //Add your code in between these two print statements
-        FlightBooking.demo();
+        BookingSimulation.demo();
 
         System.out.println("\n\n============Main Execution End===================");
     }

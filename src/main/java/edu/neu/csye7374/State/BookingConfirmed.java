@@ -24,4 +24,9 @@ public class BookingConfirmed implements BookingStatusAPI{
         booking.setState(booking.getCanceled());
         System.out.println("Booking Canceled!!");
     }
+
+    @Override
+    public String toString() {
+        return "Booking is in Confirmed State";
+    }
 }

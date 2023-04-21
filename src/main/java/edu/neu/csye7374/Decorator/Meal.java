@@ -3,7 +3,7 @@ package main.java.edu.neu.csye7374.Decorator;
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
 import main.java.edu.neu.csye7374.FlightAPI;
 
-public class Meal extends BookingDecoratorAPI{
+public class Meal extends TicketDecoratorAPI {
 
     private TicketAPI ticket;
 
@@ -17,6 +17,16 @@ public class Meal extends BookingDecoratorAPI{
     }
 
     @Override
+    public int getId() {
+        return ticket.getId();
+    }
+
+    @Override
+    public String getName() {
+        return ticket.getName();
+    }
+
+    @Override
     public FlightAPI getFlight() {
         return ticket.getFlight();
     }
@@ -24,6 +34,12 @@ public class Meal extends BookingDecoratorAPI{
     @Override
     public void setFlight(FlightAPI fl) {
         ticket.setFlight(fl);
+    }
+
+    @Override
+    public String toString(){
+        return "Ticket id: " + ticket.getId() + " ,Passenger Name: " + ticket.getName() + " ,Flight Name: " +
+                ticket.getFlight().getName() + " ,Flight Price: " + getPrice() + ", Meal";
     }
 
 }

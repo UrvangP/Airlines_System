@@ -25,4 +25,9 @@ public class BookingPending implements BookingStatusAPI{
     public void canceled() {
         System.out.println("Booking not confirmed yet!!");
     }
+
+    @Override
+    public String toString() {
+        return "Booking is in Pending State";
+    }
 }

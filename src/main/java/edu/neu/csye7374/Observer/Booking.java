@@ -23,7 +23,7 @@ public class Booking implements BookingStatusAPI {
         bookingPending = new BookingPending(this);
         bookingConfirmed = new BookingConfirmed(this);
         bookingCanceled = new BookingCanceled(this);
-        currentState = bookingPending;
+        setState(bookingPending);
         observer = new ArrayList<>();
         observer.add(new QuantityObserver());
         bookFlight();
@@ -35,6 +35,7 @@ public class Booking implements BookingStatusAPI {
 
     public void setState(BookingStatusAPI status) {
         currentState = status;
+        System.out.println("Current Booking State for ticket id " + ticket.getId() + " is: " + currentState);
     }
 
     public BookingStatusAPI getConfirmed() {

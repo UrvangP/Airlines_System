@@ -23,4 +23,9 @@ public class BookingCanceled implements BookingStatusAPI{
     public void canceled() {
         System.out.println("Booking already canceled!!");
     }
+
+    @Override
+    public String toString() {
+        return "Booking is in Canceled State";
+    }
 }

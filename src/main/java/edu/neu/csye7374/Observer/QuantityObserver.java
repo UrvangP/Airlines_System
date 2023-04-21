@@ -8,7 +8,7 @@ public class QuantityObserver implements BookingObserverAPI{
     public void update(Booking booking) {
         TicketAPI ticket = booking.getTicket();
         FlightAPI flight = ticket.getFlight();
-        if (flight.getSeatsOccupied() > 100) {
+        if (flight.getSeatsOccupied() >= 100) {
             System.out.println("All the seats in the Flight are booked");
             booking.setState(booking.getCanceled());
         }

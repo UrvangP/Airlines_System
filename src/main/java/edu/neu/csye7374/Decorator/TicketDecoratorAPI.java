@@ -3,7 +3,7 @@ package main.java.edu.neu.csye7374.Decorator;
 //Decorator Pattern
 
 import main.java.edu.neu.csye7374.Adapter.TicketAPI;
-public abstract class BookingDecoratorAPI implements TicketAPI {
+public abstract class TicketDecoratorAPI implements TicketAPI {
 
     @Override
     public int getId() {
